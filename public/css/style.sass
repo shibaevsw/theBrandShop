@@ -1,0 +1,1072 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+
+$site-color: #f16d7f
+$site-color-hover: #F1A7A1
+
+@keyframes pulsate-bck
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(0.9)
+  100%
+    transform: scale(1)
+
+*
+  margin: 0
+  padding: 0
+  outline: none
+
+body
+  font-family: Lato, sans-serif, FontAwesome
+
+//general
+.container
+  width: 1140px
+  margin: 0 auto
+
+.flex-box
+  display: flex
+  justify-content: space-between
+.header
+  width: 100%
+  height: 99px
+  border-bottom: 1px solid #e8e8e8
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+  &__left
+    display: flex
+    align-items: center
+  &__search
+    display: flex
+  &__search-form
+    display: flex
+    width: 404px
+    height: 38px
+    border: 1px solid #e6e6e6
+    border-radius: 3px
+    background-color: #ffffff
+  &__search-browse
+    display: block
+    width: 87px
+    padding-left: 15px
+    background-color: #cdcdcc
+    background-image: url(../img/smallgrayarrowtodown.png)
+    background-repeat: no-repeat
+    background-position: 69px
+    line-height: 38px
+    text-decoration: none
+    color: #222222
+    font-size: 14px
+    font-weight: 300
+    letter-spacing: 0.35px
+  &__search-input
+    width: 279px
+    padding-left: 16px
+    border: none
+    color: #a4a4a4
+    font-size: 14px
+    font-weight: 300
+    line-height: 32px
+    letter-spacing: 0.35px
+  &__search-button
+    width: 38px
+    background-color: #ffffff
+    border: none
+    border-left: 1px solid #e6e6e6
+  &__right
+    display: flex
+    align-items: center
+  &__account-button
+    display: block
+    width: 111px
+    height: 38px
+    margin-left: 26px
+    padding-left: 19px
+    background-color: $site-color
+    background-image: url(../img/smallwhitearrowtodown.png)
+    background-repeat: no-repeat
+    background-position: 109px
+    font-size: 15px
+    font-weight: 400
+    line-height: 38px
+    letter-spacing: 0.38px
+    color: #ffffff
+    text-decoration: none
+    &:hover
+      background-color: $site-color-hover
+      background-image: url(../img/smallwhitearrowtodown.png)
+      background-repeat: no-repeat
+      background-position: 109px
+  &__cart-box
+    position: relative
+  &__cart-box:hover
+    .cart-mini
+      display: block
+
+.cart-mini
+  padding: 20px
+  width: 262px
+  &__total
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    margin-bottom: 30px
+  &__checkout-btn
+    display: block
+    text-decoration: none
+    text-align: center
+    margin-bottom: 10px
+    width: 100%
+    padding-top: 20px
+    padding-bottom: 20px
+    border: 1px solid #f16d7f
+    background-color: #ffffff
+    color: #f16d7f
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+  &__gotocart-btn
+    display: block
+    text-decoration: none
+    text-align: center
+    width: 100%
+    padding-top: 20px
+    padding-bottom: 20px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+
+
+.product-mini
+  display: flex
+  position: relative
+  padding-bottom: 16px
+  border-bottom: 1px solid #ededed
+  &__img
+    margin-right: 16px
+    height: 85px
+    width: 72px
+  &__content
+    padding-top: 10px
+  &__name
+    margin-bottom: 20px
+    color: #222222
+    font-size: 12px
+    font-weight: 700
+    text-transform: uppercase
+  &__info
+    display: flex
+  &__info-part
+    margin-right: 5px
+    color: #f16d7f
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+
+.del-btn
+  position: absolute
+  right: 0
+  top: 35px
+  height: 15px
+
+.logo
+  display: flex
+  &__link
+    display: flex
+    text-decoration: none
+  &__text
+    margin-left: 13px
+    margin-right: 37px
+    margin-top: 13px
+    width: 93px
+    height: 19px
+    color: #222222
+    font-size: 27px
+    font-weight: 300
+    line-height: 32px
+    text-transform: uppercase
+    letter-spacing: 0.68px
+  &__letter
+    color: $site-color
+    font-weight: 900
+
+.menu
+  display: flex
+  justify-content: space-between
+  width: 680px
+  margin: 0 auto
+  &__list
+    position: relative
+    list-style-type: none
+  &__list:hover .drop
+    display: flex
+  &__link
+    display: block
+    height: 51px
+    color: #222222
+    text-decoration: none
+    font-size: 14px
+    font-weight: 700
+    line-height: 51px
+    text-transform: uppercase
+
+
+.drop
+  display: none
+  position: absolute
+  z-index: 1
+  top: 40px
+  left: -20px
+  padding: 20px
+  border: 1px solid #ececec
+  border-radius: 5px
+  background-color: #ffffff
+  &:before
+    position: absolute
+    top: -5px
+    left: 40px
+    transform: rotate(45deg)
+    content: ""
+    width: 8px
+    height: 8px
+    background-color: #fff
+    border-top: 1px solid #ececec
+    border-left: 1px solid #ececec
+  &-right
+    right: -20px
+    left: auto
+  &-right:before
+    left: auto
+    right: 40px !important
+  &__heading
+    border-bottom: 1px solid #ececec
+    color: #232323
+    font-size: 14px
+    font-weight: 400
+    line-height: 32px
+    text-transform: uppercase
+    letter-spacing: 0.35px
+  &__list-box
+    padding-right: 160px
+  &__list
+    list-style-type: none
+  &__link
+    color: #646464
+    text-decoration: none
+    font-size: 14px
+    font-weight: 400
+    line-height: 28px
+    letter-spacing: 0.35px
+
+.breadcrumbs
+  margin-bottom: 60px
+  height: 148px
+  background-color: #f8f3f4
+  &__content
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__heading
+    color: #f16d7f
+    font-size: 24px
+    font-weight: 900
+    line-height: 20px
+    text-transform: uppercase
+  &__list
+    display: inline-block
+    &:last-child:after
+      content: none
+    &:after
+      content: ' /'
+      color: #636363
+      font-weight: 300
+      font-size: 14px
+      line-height: 20px
+  &__link
+    text-decoration: none
+    color: #636363
+    font-weight: 300
+    font-size: 14px
+    line-height: 20px
+    text-transform: uppercase
+    &_active
+      color: $site-color
+      font-weight: 700
+
+.product
+  position: relative
+  margin-bottom: 39px
+  &__link
+    text-decoration: none
+  &__text
+   height: 84px
+   text-transform: uppercase
+   left: 0
+   bottom: 0
+  &__name
+   padding-top: 20px
+   padding-left: 14px
+   font-size: 13px
+   font-weight: 400
+   color: #222222
+  &__price
+   padding-top: 17px
+   padding-left: 14px
+   color: $site-color
+   font-size: 16px
+   font-weight: 700
+  &:hover
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+  &:hover .product__photo
+    filter: brightness(50%)
+  &__addtocart-link
+    display: none
+    position: absolute
+    top: 98px
+    left: 70px
+    border: 1px solid #ffffff
+    color: #ffffff
+    font-size: 13px
+    font-weight: 700
+    text-decoration: none
+    padding: 15px 12px
+  &__addtocart-btn
+    display: none
+    margin-right: 8px
+    color: #555
+  &__addtocart-p
+    line-height: 22px
+  &:hover &__addtocart-link
+    display: flex
+  &__addtocart-link:hover
+    box-shadow: 0 0 10px #fff
+  &:hover &__addtocart-btn
+    display: block
+
+.promo-bottom
+  display: flex
+  margin-top: 113px
+  width: 1140px
+  height: 529px
+  &__picture
+    position: relative
+  &__text_big
+    color: #ffffff
+    font-size: 54px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 1.5px
+  &__text_small
+    color: #ffffff
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 32px
+    letter-spacing: 0.9px
+  &__text-container
+    position: absolute
+    top: 146px
+    left: 39px
+  &__text_right
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    width: 373px
+    height: 529px
+    background-color: #222224
+  &__text-part img
+    float: left
+    margin-bottom: 75px
+    margin-left: 33px
+    margin-right: 33px
+  &__text-part h5
+    margin-bottom: 16px
+    color: #fbfbfb
+    font-size: 20px
+    font-weight: 700
+    letter-spacing: 0.5px
+  &__text-part p
+    margin-right: 39px
+    color: #fbfbfb
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0.35px
+
+.subscribe
+  display: flex
+  justify-content: space-between
+  margin: 100px auto
+  width: 1608px
+  height: 438px
+  background-image: url(../img/subscribe-img.jpg)
+  background-position: right bottom
+  &__quotes
+    margin-top: 110px
+    margin-left: 230px
+    margin-right: 72px
+  &__quotes img
+    float: left
+    margin-right: 28px
+    margin-bottom: 40px
+  &__quotes-text
+    color: #222224
+    font-size: 16px
+    font-style: italic
+    line-height: 26px
+    letter-spacing: 0.4px
+  &__author-name
+    color: $site-color
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: 0.4px
+    line-height: 26px
+  &__author-city
+    letter-spacing: 0.4px
+    color: #222224
+    font-size: 12px
+    font-weight: 300
+    line-height: 14px
+  &__content
+    width: 803px
+    border-right: 1px solid #fff
+  &__container
+    width: 386px
+    margin-top: 148px
+    margin-right: 330px
+    text-align: center
+  &__form_text-big
+    color: #222224
+    font-weight: 400
+    font-size: 24px
+    letter-spacing: 0.6px
+    line-height: 54px
+    text-transform: uppercase
+  &__form_text-small
+    margin-bottom: 35px
+    color: #222224
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.35px
+    line-height: 24px
+  &__form
+    display: flex
+  &__form_email-imput
+    width: 334px
+    height: 46px
+    padding-left: 28px
+    border: none
+    border-radius: 23px 0 0 23px
+    background-color: #e1e1e1
+    opacity: 0.67
+    color: #222224
+    font-size: 14px
+    font-weight: 400
+    line-height: 54px
+    letter-spacing: 0.35px
+  &__form_email-submit
+    width: 104px
+    height: 46px
+    border: none
+    border-radius: 0 23px 23px 0
+    background-color: $site-color
+    color: #ffffff
+    font-size: 14px
+    font-weight: 400
+    line-height: 44px
+    letter-spacing: 0.35px
+    &:hover
+      background-color: $site-color-hover
+
+.footer
+  &__top
+    display: flex
+    height: 350px
+  &__left
+    width: 490px
+  &__description
+    margin-top: 29px
+    width: 427px
+    height: 190px
+    color: #898989
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0.35px
+    overflow: hidden
+  &__right
+    display: flex
+    justify-content: space-between
+    width: 650px
+  &__list-box h5
+    color: $site-color
+    font-size: 18px
+    font-weight: 700
+    line-height: 26px
+    text-transform: uppercase
+    letter-spacing: 0.45px
+  &__menu
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: 0.4px
+    line-height: 42px
+    list-style-type: none
+  &__menu li a
+    color: #898989
+    text-decoration: none
+  &__bottom
+    height: 79px
+    background-color: #e6e6e6
+  &__bottom-content
+    display: flex
+    justify-content: space-between
+    height: 100%
+  &__bottom-left
+    display: flex
+    align-items: center
+  &__copyright
+    color: #7a7a7a
+    font-size: 16px
+    font-weight: 400
+    line-height: 42px
+    letter-spacing: 0.4px
+  &__bottom-right
+    display: flex
+    align-items: center
+  &__social-icon
+    margin: 0 4px
+    color: #ffffff
+  &__social-icon:hover
+    animation: pulsate-bck 0.5s ease-in-out infinite both
+    color: $site-color
+  &__social-icon:active
+    color: #b2b2b2
+
+
+//index
+.promo
+  height: 614px
+  background-color: #e8e8e8
+  &__content
+    margin: 0 auto
+    height: 614px
+    background-image: url(../img/promo.jpg)
+    background-position: 0 -51px
+  &__text
+    padding-left: 12px
+    margin-top: 225px
+    float: left
+    border-left: 12px solid $site-color
+    height: 92px
+    line-height: 41px
+    font-weight: 900
+    text-transform: uppercase
+    &_big
+      color: #222222
+      font-size: 60px
+      letter-spacing: 1.5px
+    &_small
+      color: #222222
+      font-size: 40px
+      text-transform: uppercase
+      letter-spacing: 1px
+      line-height: 70px
+    &_color
+      color: $site-color
+
+.offer
+  display: flex
+  justify-content: space-between
+  margin-top: 98px
+  & div:first-child
+    margin-bottom: 20px
+  &__big, &__small
+    position: relative
+  &__text
+    position: absolute
+    top: 42px
+    background: #fff
+    padding: 16px 20px
+    font-weight: 900
+    text-transform: uppercase
+  &__text .small-text
+    color: #222222
+    font-size: 18px
+    letter-spacing: 0.45px
+  &__text .big-text
+    color: $site-color
+    font-size: 30px
+    letter-spacing: 0.75px
+
+.fetured
+  &__heading
+    margin-top: 80px
+    text-align: center
+  &__h3
+    color: #222222
+    font-size: 30px
+    font-weight: 700
+    line-height: 23px
+    letter-spacing: 0.75px
+  &__p
+    padding-top: 16px
+    color: #9f9f9f
+    font-size: 14px
+    font-weight: 400
+    line-height: 14px
+    letter-spacing: 0.35px
+  &__products
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 63px
+  &__browse-all-box
+    text-align: center
+  &__browse-all
+    padding: 16px
+    background-color: $site-color
+    color: #ffffff
+    font-size: 16px
+    font-weight: 700
+    line-height: 54px
+    letter-spacing: 0.4px
+    text-decoration: none
+    &:hover
+      background-color: $site-color-hover
+
+
+//product
+.side-menu
+  width: 243px
+  list-style-type: none
+  &__nav
+    width: 243px
+  &__list
+    //position: relative
+    list-style-type: none
+    margin-bottom: 18px
+    &_active .side-menu__ul
+      display: block
+  &__link
+    display: block
+    padding: 14px
+    position: relative
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    text-decoration: none
+    border-left: 5px solid $site-color
+    border-bottom: 1px solid #ebebeb
+    &:after
+      content: "\f0dd"
+      font-family: FontAwesome
+      color: #6f6e6e
+      position: absolute
+      right: 6px
+    &_active
+      color: $site-color
+      &:after
+        content: "\f0de"
+        font-family: FontAwesome
+        color: $site-color
+        position: absolute
+        right: 6px
+  &__ul
+    margin: 22px 17px
+    display: none
+
+.products
+  width: 846px
+.products-filter
+    height: 126px
+    margin-bottom: 50px
+    &__choice
+      display: flex
+      justify-content: space-between
+    &__heading
+      margin-bottom: 25px
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 700
+      line-height: 20px
+      text-transform: uppercase
+    &__link
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 400
+      line-height: 26px
+      text-decoration: none
+      padding: 0 10px
+      border-right: 1px solid #dfdfdf
+      &:first-child
+        padding-left: 0
+      &:last-child
+        border-right: none
+    &__choose-size
+      display: inline-block
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 400
+      line-height: 20px
+      text-transform: uppercase
+      margin-left: 10px
+      margin-right: 23px
+    &__sort
+      height: 50px
+      background-color: #f3f3f3
+.products-box
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.products-pages
+  display: flex
+  justify-content: space-between
+  height: 44px
+.pagination
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 261px
+  height: 44px
+  border-radius: 3px
+  border: 1px solid #ebebeb
+  background-color: #ffffff
+  list-style-type: none
+  &__link
+    padding: 15px 10px
+    color: #c4c4c4
+    font-size: 16px
+    font-weight: bold
+    text-decoration: none
+    &_active
+      color: $site-color
+
+.view-all
+  padding: 15px 45px
+  border-radius: 3px
+  border: 1px solid #ef5b70
+  color: #ef5b70
+  font-size: 16px
+  font-weight: bold
+  text-decoration: none
+  line-height: 11px
+
+
+//siglepage
+.product-slider
+  height: 777px
+  border: 1px solid #eaeaea
+  background-color: #f7f7f7
+  margin-top: -60px
+  margin-bottom: -86px
+  &__container
+    position: relative
+    width: 1607px
+    margin: 0 auto
+  &__button
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    width: 47px
+    height: 47px
+    background-color: #ccc
+    &_left
+      top: 365px
+    &_right
+      top: 365px
+      right: 0
+  &__arrow
+    color: #ffffff
+    font-size: -24px
+    font-weight: 400
+    line-height: -24px
+
+.product-description
+  position: relative
+  width: 1141px
+  height: 730px
+  border: 1px solid #eaeaea
+  background-color: #ffffff
+  text-align: center
+  &__h3
+    position: relative
+    display: inline-block
+    border-bottom: 1px solid #eaeaea
+    margin-top: 70px
+    padding-bottom: 10px
+    color: $site-color
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+    &:after
+      position: absolute
+      bottom: -2px
+      left: 33.33%
+      content: ''
+      width: 33.33%
+      height: 3px
+      background-color: $site-color
+  &__h5
+    margin-top: 15px
+    margin-bottom: 65px
+    color: #4d4d4d
+    font-size: 18px
+    font-weight: 900
+    line-height: 24px
+    text-transform: uppercase
+  &__top
+    display: inline-block
+    border-bottom: 1px solid #eaeaea
+  &__p
+    margin: 0 auto
+    width: 620px
+    color: #5e5e5e
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+  &__price
+    margin-bottom: 40px
+    color: $site-color
+    font-size: 24px
+    font-weight: 700
+    line-height: 24px
+  &__addtocart
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    width: 537px
+    height: 55px
+    border: 1px solid #ef5b70
+    text-decoration: none
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 700
+  &__addtocart-p
+    margin-left: 15px
+
+.mini-info
+  display: flex
+  justify-content: space-between
+  margin: 30px 150px
+  &__p
+    color: #b9b9b9
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+    color: #b9b9b9
+  &__meaning
+    color: #2f2f2f
+
+
+.product-options
+  display: flex
+  justify-content: space-between
+  margin: 60px auto 30px
+  width: 537px
+  &__p
+    color: #2f2f2f
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+  &__choose-form
+    width: 144px
+    height: 35px
+    border: 1px solid #eaeaea
+.promo-maylike__heding
+  margin: 120px auto 70px
+  color: #4d4d4d
+  font-size: 24px
+  font-weight: 900
+  line-height: 20px
+  text-transform: uppercase
+  text-align: center
+
+.products-line
+  display: flex
+  justify-content: space-between
+
+//shopping-cart
+.shopping-cart
+  display: flex
+  flex-direction: column
+  &__buttons
+    display: flex
+    justify-content: space-between
+  &__button
+    margin-top: 45px
+    padding: 20px 38px
+    border: 1px solid #eaeaea
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+.item
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid #eaeaea
+  padding-top: 25px
+  padding-bottom: 25px
+  &__details
+    display: flex
+    width: 30%
+  &__img
+    width: 100px
+    height: 115px
+    margin-right: 20px
+  &__header
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid #eaeaea
+    padding-bottom: 25px
+    color: #222222
+    font-size: 13px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+  &__name
+    color: #222222 !important
+    text-transform: uppercase
+    margin-top: 10px
+    margin-bottom: 35px
+
+.item p
+  color: #656565
+  font-size: 13px
+  font-weight: 400
+  line-height: 20px
+
+.proceed
+  display: flex
+  justify-content: space-between
+  margin-top: 63px
+.order
+  display: flex
+  &__flex
+    display: flex
+    flex-direction: column
+    margin-right: 35px
+  &__h3
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &__form
+    width: 355px
+    height: 45px
+    border: 1px solid #eaeaea
+    margin-top: 20px
+    padding-left: 18px
+  &__btn-box
+    margin-top: 30px
+  &__btn
+    border: 1px solid #eaeaea
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 700
+    text-transform: uppercase
+    padding: 14px
+    text-decoration: none
+  &__proceed-to-checkout
+    //display: flex
+    //flex-direction: column
+    //justify-content: space-between
+    width: 360px
+    height: 214px
+    background-color: #f5f3f3
+  &__price
+    text-align: right
+    margin: 40px 40px 20px auto
+    padding-bottom: 20px
+  &__finish-btn-box-center
+    text-align: center
+  &__finish-btn-box
+    display: inline-block
+    margin: 0 auto
+    border-top: 1px solid #e2e2e2
+    padding-top: 35px
+  &__finish-btn
+    padding: 18px 42px
+    background-color: $site-color
+    color: #ffffff
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+
+
+//checkout
+.checkout-box
+  display: flex
+  justify-content: space-between
+.checkout
+  &__heading
+    margin-bottom: 40px
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &__subheading
+    margin-bottom: 15px
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+  &__p-small
+    margin-bottom: 15px
+    color: #b3b2b2
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+  &__p
+    margin-bottom: 30px
+    color: #222222
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+  &__checkbox
+    float: left
+    margin-right: 15px
+  &__p-color
+    padding-bottom: 30px
+    color: #ff0d0d
+
+.checkout-btn
+  margin-right: 32px
+  width: 180px
+  height: 50px
+  border: 1px solid #eaeaea
+  background-color: #ffffff
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+
+.login-form
+  margin-bottom: 25px
+  padding-left: 15px
+  width: 390px
+  height: 45px
+  border: 1px solid #eaeaea
+  background-color: #ffffff
+
+.login-btn-box
+  display: flex
+  align-items: center
+  &__p
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    color: #222222
